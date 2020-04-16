@@ -23,7 +23,7 @@ def get_filters():
     
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("\nWhich city would you like to select? Chicago, New York City, or Washington?\n").title()
+        city = input("\nSelect 1 of the following cities: Chicago, New York City, or Washington.\n").title()
         if city not in ('Chicago', 'New York City', 'Washington'):
             print('Sorry, please make sure your selection is valid.')
             continue
@@ -32,7 +32,7 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-        month = input("\nWhich months would you like to select? Ranging from January until June, or \"all\" if no preference.\n").title()
+        month = input("\nSelect 1 month ranging from January until June, or \"all\" if no preference.\n").title()
         if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'All'):
             print("Sorry, please make sure your selection is valid.")
             continue
@@ -41,7 +41,7 @@ def get_filters():
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input("\nWhich day would you like to select? Ranging from Monday until Sunday, or \"all\" if no preference.\n").title()
+        day = input("\nSelect 1 day ranging from Monday until Sunday, or \"all\" if no preference.\n").title()
         if day not in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'All'):
             print("Sorry, please make sure your selection is valid.")
             continue
@@ -50,7 +50,6 @@ def get_filters():
 
     print('-'*40)
     return city, month, day
-
 
 def load_data(city, month, day):
     """
@@ -87,7 +86,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -109,7 +107,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -136,7 +133,6 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -153,7 +149,6 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -209,7 +204,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
