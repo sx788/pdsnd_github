@@ -7,6 +7,7 @@ US Bike Share Analysis
 
 ### Description
 Analyze data based on input filters
+User can select from chicago, new york, or washington, with different months and days
 
 ### Files used
 bikeshare_2.py
