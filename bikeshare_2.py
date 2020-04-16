@@ -1,3 +1,7 @@
+# Author: Sam
+# Data Source: Udacity
+# No copy and paste for answer
+
 import time
 import pandas as pd
 import numpy as np
